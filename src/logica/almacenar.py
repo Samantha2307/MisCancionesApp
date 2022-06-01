@@ -26,6 +26,7 @@ if __name__ == '__main__':
     album2 = Album(titulo="Bandas sonoras famosas", ano=2021, descripcion="Compilación", medio=Medio.DISCO)
     session.add(album1)
     session.add(album2)
+    session.commit()
 
     # Crear canciones
     cancion1 = Cancion(titulo="Ajiaco", minutos=3, segundos=1, compositor="Samuel Torres")
@@ -34,10 +35,12 @@ if __name__ == '__main__':
     session.add(cancion1)
     session.add(cancion2)
     session.add(cancion3)
+    session.commit()
 
     # Relacionar albumes con canciones
     album1.canciones = [cancion1, cancion2]
     album2.canciones = [cancion1, cancion3]
+    session.commit()
 
     # Relacionar canciones con intérpretes
     cancion1.interpretes = [interprete1]
@@ -45,5 +48,4 @@ if __name__ == '__main__':
     cancion3.interpretes = [interprete3, interprete4]
     session.commit()
 
-    session.commit()
     session.close()

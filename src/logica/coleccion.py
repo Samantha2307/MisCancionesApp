@@ -43,8 +43,9 @@ if __name__ == '__main__':
         print("Se añadio el nuevo registro.")
     else:
         print("Ya existe el titulo. No se añadio el registro.")
-    # editar_album(self, album_id, titulo, anio, descripcion, medio)
-    if coleccion.editar_album(1, "zxy", 2022, "Primicia", Medio.CASETE):
+
+
+    if coleccion.editar_album(1, "JEFA", 2022, "Primicia", Medio.CASETE):
         print("Se actualizó el registro.")
     else:
         print("Ya existe el titulo. No se actualizó el registro.")
